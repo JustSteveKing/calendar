@@ -7,10 +7,12 @@ namespace App\Models;
 use App\Enums\Booking\Category;
 use App\Enums\Booking\Status;
 use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property string $id
@@ -29,6 +31,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property null|CarbonInterface $updated_at
  * @property Calendar $calendar
  * @property User $organizer
+ * @property Collection<Attendee> $attendees
  */
 final class Event extends Model
 {
@@ -65,6 +68,15 @@ final class Event extends Model
         return $this->belongsTo(
             related: User::class,
             foreignKey: 'user_id',
+        );
+    }
+
+    /** @return HasMany */
+    public function attendees(): HasMany
+    {
+        return $this->hasMany(
+            related: Attendee::class,
+            foreignKey: 'event_id',
         );
     }
 

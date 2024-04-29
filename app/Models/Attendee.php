@@ -14,11 +14,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * @property string $id
  * @property Status $status
- * @property string $calendar_id
+ * @property string $event_id
  * @property string $user_id
  * @property null|CarbonInterface $created_at
  * @property null|CarbonInterface $updated_at
- * @property Calendar $calendar
+ * @property Event $event
  * @property User $user
  */
 final class Attendee extends Model
@@ -29,16 +29,16 @@ final class Attendee extends Model
     /** @var array<int,string> */
     protected $fillable = [
         'status',
-        'calendar_id',
+        'event_id',
         'user_id',
     ];
 
     /** @return BelongsTo */
-    public function calendar(): BelongsTo
+    public function event(): BelongsTo
     {
         return $this->belongsTo(
-            related: Calendar::class,
-            foreignKey: 'calendar_id',
+            related: Event::class,
+            foreignKey: 'event_id',
         );
     }
 

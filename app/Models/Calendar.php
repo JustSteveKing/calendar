@@ -24,7 +24,6 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property null|CarbonInterface $updated_at
  * @property Model $linkable
  * @property Collection<Event> $events
- * @property Collection<Attendee> $attendees
  */
 final class Calendar extends Model
 {
@@ -51,15 +50,6 @@ final class Calendar extends Model
     {
         return $this->hasMany(
             related: Event::class,
-            foreignKey: 'calendar_id',
-        );
-    }
-
-    /** @return HasMany */
-    public function attendees(): HasMany
-    {
-        return $this->hasMany(
-            related: Attendee::class,
             foreignKey: 'calendar_id',
         );
     }
