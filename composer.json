@@ -9,6 +9,7 @@
   "license": "MIT",
   "require": {
     "php": "^8.3",
+    "hirethunk/verbs": "^0.4.3",
     "laravel/framework": "^11.5",
     "laravel/tinker": "^2.9"
   },
