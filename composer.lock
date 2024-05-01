@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ed0d8ab15cf0c884f79852a80e493c9",
+    "content-hash": "79e0cf9df16c91f28d8c9665205f9368",
     "packages": [
         {
             "name": "brick/math",
@@ -1818,6 +1818,82 @@
             "time": "2024-04-12T21:57:37+00:00"
         },
         {
+            "name": "ijpatricio/mingle",
+            "version": "v0.0.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ijpatricio/mingle.git",
+                "reference": "5695f9823502b6b45dea45a5219dcc203ed27eac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ijpatricio/mingle/zipball/5695f9823502b6b45dea45a5219dcc203ed27eac",
+                "reference": "5695f9823502b6b45dea45a5219dcc203ed27eac",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0||^11.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.14",
+                "nunomaduro/collision": "^8.1.1||^7.10.0",
+                "orchestra/testbench": "^9.0.0||^8.22.0",
+                "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-arch": "^2.7",
+                "pestphp/pest-plugin-laravel": "^2.3",
+                "spatie/laravel-ray": "^1.35"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ijpatricio\\Mingle\\MingleServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mingle": "Ijpatricio\\Mingle\\Facades\\Mingle"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ijpatricio\\Mingle\\": "src/",
+                    "Ijpatricio\\Mingle\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joao Patricio",
+                    "email": "ijpatricio@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Use Vue and React in Laravel Livewire Applications.",
+            "homepage": "https://github.com/ijpatricio/mingle",
+            "keywords": [
+                "laravel",
+                "livewire",
+                "react",
+                "vue"
+            ],
+            "support": {
+                "issues": "https://github.com/ijpatricio/mingle/issues",
+                "source": "https://github.com/ijpatricio/mingle/tree/v0.0.14"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ijpatricio",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-19T10:58:27+00:00"
+        },
+        {
             "name": "internachi/modular",
             "version": "2.2.0",
             "source": {
@@ -2737,6 +2813,82 @@
                 }
             ],
             "time": "2024-01-28T23:22:08+00:00"
+        },
+        {
+            "name": "livewire/livewire",
+            "version": "v3.4.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/livewire.git",
+                "reference": "8a78d0c3ae9b4c96a2d8932ea4ac0dc782325de0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/8a78d0c3ae9b4c96a2d8932ea4ac0dc782325de0",
+                "reference": "8a78d0c3ae9b4c96a2d8932ea4ac0dc782325de0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^10.0|^11.0",
+                "illuminate/routing": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "illuminate/validation": "^10.0|^11.0",
+                "league/mime-type-detection": "^1.9",
+                "php": "^8.1",
+                "symfony/console": "^6.0|^7.0",
+                "symfony/http-kernel": "^6.2|^7.0"
+            },
+            "require-dev": {
+                "calebporzio/sushi": "^2.1",
+                "laravel/framework": "^10.0|^11.0",
+                "laravel/prompts": "^0.1.6",
+                "mockery/mockery": "^1.3.1",
+                "orchestra/testbench": "^8.21.0|^9.0",
+                "orchestra/testbench-dusk": "^8.24|^9.1",
+                "phpunit/phpunit": "^10.4",
+                "psy/psysh": "^0.11.22|^0.12"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ],
+                    "aliases": {
+                        "Livewire": "Livewire\\Livewire"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Livewire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "A front-end framework for Laravel.",
+            "support": {
+                "issues": "https://github.com/livewire/livewire/issues",
+                "source": "https://github.com/livewire/livewire/tree/v3.4.11"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/livewire",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-24T12:14:15+00:00"
         },
         {
             "name": "monolog/monolog",

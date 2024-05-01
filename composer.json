@@ -10,8 +10,10 @@
   "require": {
     "php": "^8.3",
     "hirethunk/verbs": "^0.4.3",
+    "ijpatricio/mingle": "^0.0.14",
     "laravel/framework": "^11.5",
-    "laravel/tinker": "^2.9"
+    "laravel/tinker": "^2.9",
+    "livewire/livewire": "^3.4"
   },
   "require-dev": {
     "fakerphp/faker": "^1.23.1",
