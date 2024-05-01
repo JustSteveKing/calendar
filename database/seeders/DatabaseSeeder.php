@@ -25,7 +25,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         $calendar = Calendar::factory()->for($user, 'linkable')->create([
-            'visibility' => Visibility::Internal,
+            'visibility' => Visibility::Public,
         ]);
 
         Event::factory()->for($calendar)->for($user, 'organizer')->create();

@@ -6,7 +6,7 @@ namespace App\Enums\Booking;
 
 enum Status: string
 {
-    case Invited = 'Invited';
+    case Invited = 'invited';
     case Confirmed = 'confirmed';
     case Tentative = 'tentative';
     case Cancelled = 'cancelled';
